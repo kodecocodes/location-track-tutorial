@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Async",
+        "repositoryURL": "https://github.com/vapor/async.git",
+        "state": {
+          "branch": null,
+          "revision": "ed6d1c0d2a343e79426136d66c87dae7df055802",
+          "version": "1.0.0-alpha.5"
+        }
+      },
+      {
+        "package": "Vapor",
+        "repositoryURL": "https://github.com/vapor/vapor.git",
+        "state": {
+          "branch": "ssl-server",
+          "revision": "c5ce480935cc71e6f3118d67319c03f569a38490",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
