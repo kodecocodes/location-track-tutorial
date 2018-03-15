@@ -6,13 +6,50 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var followButton: UIButton!
 
+    private let echo = WebSocket("ws://\(host)/echo-test")
+
     // MARK: LifeCycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupEcho()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hideActivity()
     }
 
+    // MARK: Echo
+
+    func setupEcho() {
+        addEchoButton()
+        addEchoListener()
+    }
+
+    func addEchoButton() {
+        let echoButton = UIBarButtonItem(
+            title: "Echo",
+            style: .plain,
+            target: self,
+            action: #selector(didPressEchoButton)
+        )
+
+        navigationItem.leftBarButtonItem = echoButton
+    }
+
+    func addEchoListener() {
+        echo.event.message = { message in
+            print("got message: \(message)")
+        }
+    }
+
+    @objc func didPressEchoButton() {
+        let message = "sending echo \(Date().timeIntervalSince1970)"
+        print("sending \(message)")
+        echo.send(message)
+    }
+    
     // MARK: Show / Hide
 
     func showActivity() {

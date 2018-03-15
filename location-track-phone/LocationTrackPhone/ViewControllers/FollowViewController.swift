@@ -51,7 +51,7 @@ class FollowViewController: UIViewController {
         }
 
         ws.event.message = { [weak self] message in
-            guard let bytes = message as? [UInt8] else { fatalError("// TODO: ") }
+            guard let bytes = message as? [UInt8] else { return }
             let data = Data(bytes: bytes)
             let decoder = JSONDecoder()
             do {

@@ -15,11 +15,14 @@ final class KeyGenerator {
     static func randomKey(for request: Request) throws -> Future<String> {
         let client = try request.make(Client.self)
         let uri = URI(stringLiteral: wordAPI)
-        return client.send(.get, to: uri)
-            .then { response in
+        let send = client.send(.get, to: uri)
+        send.catch { error in
+            print(error)
+        }
+        return send.flatMap(to: [WordResult].self) { response in
                 return try [WordResult].decode(from: response, for: request)
             }
-            .map { words in
+            .map(to: String.self) { words in
                 words.map { $0.word } .joined(separator: ".") .lowercased()
             }
     }

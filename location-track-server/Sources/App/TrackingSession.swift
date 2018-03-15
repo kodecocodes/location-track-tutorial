@@ -20,3 +20,4 @@ extension TrackingSession: Parameter {
         return .init(id: parameter)
     }
 }
+

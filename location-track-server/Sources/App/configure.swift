@@ -9,5 +9,7 @@ public func configure(
     _ services: inout Services
 ) throws {
     // configure your application here
-
+    let router = EngineRouter.default()
+    try routes(router)
+    services.register(router, as: Router.self)
 }
