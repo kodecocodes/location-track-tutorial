@@ -32,7 +32,7 @@ final class TrackingSessionManager {
     // MARK: Poster Interactions
     
     func createTrackingSession(for request: Request) throws -> Future<TrackingSession> {
-        return try KeyGenerator.randomKey(for: request)
+        return wordKey()
             .flatMap(to: TrackingSession.self) { [unowned self] key -> Future<TrackingSession> in
                 let session = TrackingSession(id: key)
                 guard self.sessions[session] == nil else {

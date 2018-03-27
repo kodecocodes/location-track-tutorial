@@ -51,8 +51,8 @@ public func routes(_ router: Router) throws {
         }
     }
 
-    router.get("wordnik-test") { request in
-        return try KeyGenerator.randomKey(for: request)
+    router.get("word-test") { request in
+        return wordKey()
     }
 
     // MARK: Poster Routes
