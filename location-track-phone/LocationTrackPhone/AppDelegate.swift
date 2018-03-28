@@ -46,6 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            ws.send("echo test \(i)")
 //        }
 
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let home = HomeViewController()
+        let nav = UINavigationController(rootViewController: home)
+        self.window?.rootViewController = nav
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 

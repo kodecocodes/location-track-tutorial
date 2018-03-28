@@ -31,8 +31,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     private let echo = WebSocket("ws://\(host)/echo-test")
 
@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupEcho()
+        title = "HOME"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController {
         print("sending \(message)")
         echo.send(message)
     }
-    
+
     // MARK: Show / Hide
 
     func showActivity() {

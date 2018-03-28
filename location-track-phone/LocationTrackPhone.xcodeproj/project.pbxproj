@@ -12,6 +12,7 @@
 		8043F2B91FDD75D800F5E0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8043F2B81FDD75D800F5E0FA /* Assets.xcassets */; };
 		8043F2BC1FDD75D800F5E0FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8043F2BA1FDD75D800F5E0FA /* LaunchScreen.storyboard */; };
 		80BF78411FDDC4B600965AAE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BF78401FDDC4B600965AAE /* libz.tbd */; };
+		80D42229206B1F7D0001B21A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D42228206B1F7D0001B21A /* HomeViewController.xib */; };
 		80F0C1791FDE669200211BA4 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F0C16A1FDE669200211BA4 /* WebSocket.swift */; };
 		80F0C17A1FDE669200211BA4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F0C16B1FDE669200211BA4 /* WebServices.swift */; };
 		80F0C17B1FDE669200211BA4 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F0C16D1FDE669200211BA4 /* ShareViewController.xib */; };
@@ -36,6 +37,7 @@
 		80BF78401FDDC4B600965AAE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		80BF784A1FDDC88500965AAE /* libz.1.2.11.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.11.tbd; path = usr/lib/libz.1.2.11.tbd; sourceTree = SDKROOT; };
 		80BF784C1FDDC89E00965AAE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		80D42228206B1F7D0001B21A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		80F0C16A1FDE669200211BA4 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		80F0C16B1FDE669200211BA4 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		80F0C16D1FDE669200211BA4 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				80F0C1721FDE669200211BA4 /* FollowViewController.swift */,
 				80F0C1701FDE669200211BA4 /* FollowViewController.xib */,
 				80F0C16F1FDE669200211BA4 /* HomeViewController.swift */,
+				80D42228206B1F7D0001B21A /* HomeViewController.xib */,
 				80F0C16E1FDE669200211BA4 /* SessionEntryViewController.swift */,
 				80F0C1731FDE669200211BA4 /* SessionEntryViewController.xib */,
 				80F0C1711FDE669200211BA4 /* ShareViewController.swift */,
@@ -209,6 +212,7 @@
 				80F0C17E1FDE669200211BA4 /* FollowViewController.xib in Resources */,
 				8043F2B91FDD75D800F5E0FA /* Assets.xcassets in Resources */,
 				80F0C17B1FDE669200211BA4 /* ShareViewController.xib in Resources */,
+				80D42229206B1F7D0001B21A /* HomeViewController.xib in Resources */,
 				8043F2B71FDD75D800F5E0FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
